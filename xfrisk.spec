@@ -1,7 +1,7 @@
 Summary: XFrisk, a multi-user network version of the classic "Risk"
 Name: xfrisk
 Version: 1.2
-Release: %mkrel 7
+Release: %mkrel 8
 Group: Games/Strategy
 Source: http://www.iki.fi/morphy/xfrisk/XFrisk-%{version}.tar.gz
 Patch0: XFrisk-mdk.patch
@@ -35,7 +35,7 @@ cat << EOF >%buildroot%_datadir/applications/mandriva-%name.desktop
 [Desktop Entry]
 Name=XFrisk
 Comment=A multi-user network version of the classic "Risk"
-Exec=%_bindir/xfrisk
+Exec=%_bindir/risk
 Icon=strategy_section
 Terminal=false
 Type=Application
