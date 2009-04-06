@@ -30,6 +30,18 @@ make PREFIX=%_prefix CC="gcc %{optflags}" LDFLAGS="%{?ldflags}"
 rm -rf $RPM_BUILD_ROOT
 make PREFIX=%buildroot%_prefix install
 
+mkdir -p %buildroot%_datadir/applications
+cat << EOF >%buildroot%_datadir/applications/mandriva-%name.desktop
+[Desktop Entry]
+Name=XFrisk
+Comment=A multi-user network version of the classic "Risk"
+Exec=%_bindir/xfrisk
+Icon=strategy_section
+Terminal=false
+Type=Application
+Categories=Game;StrategyGame;
+EOF
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -42,11 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/aiDummy
 %{_bindir}/aiConway
 %{_bindir}/aiColson
+%_datadir/applications/mandriva-%name.desktop
 %doc BUGS
-%doc COPYING
 %doc ChangeLog
 %doc FAQ
 %doc README.NEW
 %doc TODO
-
-
