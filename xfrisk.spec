@@ -1,13 +1,14 @@
 %define    release      %mkrel 6
 %define    version      1.2
-%define    name         XFrisk
+%define    name         xfrisk
+
 Summary: XFrisk, a multi-user network version of the classic "Risk"
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Group: Games/Strategy
 Source: http://www.iki.fi/morphy/xfrisk/%{name}-%{version}.tar.gz
-Patch: XFrisk-mdk.patch.bz2
+Patch: XFrisk-mdk.patch
 License: GPL
 URL: http://www.iki.fi/morphy/xfrisk
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
