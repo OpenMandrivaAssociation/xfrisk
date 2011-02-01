@@ -1,7 +1,7 @@
 Summary: XFrisk, a multi-user network version of the classic "Risk"
 Name: xfrisk
 Version: 1.2
-Release: %mkrel 9
+Release: %mkrel 10
 Group: Games/Strategy
 Source: http://www.iki.fi/morphy/xfrisk/XFrisk-%{version}.tar.gz
 Patch0: XFrisk-mdk.patch
@@ -9,9 +9,10 @@ Patch1: XFrisk-1.2-fix-str-fmt.patch
 License: GPL
 URL: http://www.iki.fi/morphy/xfrisk
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-
-BuildRequires: X11-devel
+BuildRequires: libx11-devel
 BuildRequires: Xaw3d-devel
+BuildRequires: libxaw-devel
+BuildRequires: libxt-devel
 Obsoletes: XFrisk < %version-%release
 Provides: XFrisk = %version-%release
 
