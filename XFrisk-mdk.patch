@@ -1,0 +1,19 @@
+*** XFrisk/Makefile	Sun Jan 23 20:01:55 2000
+--- Makefile	Wed Mar 16 19:24:51 2005
+***************
+*** 145,151 ****
+  #          You shouldn't need to edit below here           #
+  ############################################################
+  
+! LIBDIR=$(PREFIX)/lib/xfrisk
+  BINDIR=$(PREFIX)/bin
+  
+  # Data files, stored in LIBDIR
+--- 145,151 ----
+  #          You shouldn't need to edit below here           #
+  ############################################################
+  
+! LIBDIR=$(PREFIX)/share/xfrisk
+  BINDIR=$(PREFIX)/bin
+  
+  # Data files, stored in LIBDIR

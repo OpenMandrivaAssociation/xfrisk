@@ -1,0 +1,11 @@
+--- server.c.str	2009-04-06 10:45:49.000000000 +0200
++++ server.c	2009-04-06 10:46:01.000000000 +0200
+@@ -309,7 +309,7 @@
+ 
+         /* Informative message */
+         sprintf(buf,"%s: %s %s\n",SERVERNAME,CLIENTS_GetAddress(iClient),HAS_DEREGISTERED);
+-        printf(buf);
++        printf("%s",buf);
+         SRV_BroadcastTextMessage("A client has deregistered");
+         break;
+ 
