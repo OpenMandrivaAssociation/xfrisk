@@ -9,10 +9,10 @@ Patch1: XFrisk-1.2-fix-str-fmt.patch
 License: GPL
 URL: http://www.iki.fi/morphy/xfrisk
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires: libx11-devel
+BuildRequires: pkgconfig(x11)
 BuildRequires: Xaw3d-devel
-BuildRequires: libxaw-devel
-BuildRequires: libxt-devel
+BuildRequires: pkgconfig(xaw7)
+BuildRequires: pkgconfig(xt)
 Obsoletes: XFrisk < %version-%release
 Provides: XFrisk = %version-%release
 
