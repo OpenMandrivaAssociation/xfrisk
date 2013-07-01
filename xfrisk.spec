@@ -1,4 +1,4 @@
-Summary: XFrisk, a multi-user network version of the classic "Risk"
+Summary: , a multi-user network version of the classic "Risk"
 Name: xfrisk
 Version: 1.2
 Release: 11
