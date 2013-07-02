@@ -1,7 +1,7 @@
-Summary: , a multi-user network version of the classic "Risk"
+Summary: A multi-user network version of the classic "Risk"
 Name: xfrisk
 Version: 1.2
-Release: 11
+Release: 12
 Group: Games/Strategy
 Source: http://www.iki.fi/morphy/xfrisk/XFrisk-%{version}.tar.gz
 Patch0: XFrisk-mdk.patch
@@ -12,8 +12,8 @@ BuildRequires: pkgconfig(x11)
 BuildRequires: Xaw3d-devel
 BuildRequires: pkgconfig(xaw7)
 BuildRequires: pkgconfig(xt)
-Obsoletes: XFrisk < %version-%release
-Provides: XFrisk = %version-%release
+Obsoletes: XFrisk < %{version}-%{release}
+Provides: XFrisk = %{version}-%{release}
 
 %description
 XFrisk a multi-user network version of the classic "Risk"
@@ -24,18 +24,17 @@ XFrisk a multi-user network version of the classic "Risk"
 %patch1 -p0 -b .str
 
 %build
-make PREFIX=%_prefix CC="gcc %{optflags}" LDFLAGS="%{?ldflags}"
+make PREFIX=%{_prefix} CC="gcc %{optflags}" LDFLAGS="%{?ldflags}"
 
 %install
-rm -rf $RPM_BUILD_ROOT
-make PREFIX=%buildroot%_prefix install
+make PREFIX=%{buildroot}%{_prefix} install
 
-mkdir -p %buildroot%_datadir/applications
-cat << EOF >%buildroot%_datadir/applications/mandriva-%name.desktop
+mkdir -p %{buildroot}%{_datadir}/applications
+cat << EOF >%{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
 Name=XFrisk
 Comment=A multi-user network version of the classic "Risk"
-Exec=%_bindir/risk
+Exec=%{_bindir}/risk
 Icon=strategy_section
 Terminal=false
 Type=Application
@@ -43,7 +42,6 @@ Categories=Game;StrategyGame;
 EOF
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,games,games,-)
@@ -54,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/aiDummy
 %{_bindir}/aiConway
 %{_bindir}/aiColson
-%_datadir/applications/mandriva-%name.desktop
+%{_datadir}/applications/mandriva-%{name}.desktop
 %doc BUGS
 %doc ChangeLog
 %doc FAQ
