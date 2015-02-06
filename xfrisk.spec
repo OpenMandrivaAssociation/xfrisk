@@ -1,7 +1,7 @@
 Summary: A multi-user network version of the classic "Risk"
 Name: xfrisk
 Version: 1.2
-Release: 12
+Release: 13
 Group: Games/Strategy
 Source: http://www.iki.fi/morphy/xfrisk/XFrisk-%{version}.tar.gz
 Patch0: XFrisk-mdk.patch
