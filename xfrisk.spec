@@ -8,6 +8,7 @@ Patch0: XFrisk-mdk.patch
 Patch1: XFrisk-1.2-fix-str-fmt.patch
 License: GPL
 URL: https://www.iki.fi/morphy/xfrisk
+BuildRequires:	make
 BuildRequires: pkgconfig(x11)
 BuildRequires: Xaw3d-devel
 BuildRequires: pkgconfig(xaw7)
